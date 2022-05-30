@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/labs/.vs
+/labs/bin
+/labs/obj
+/labs/Properties/PublishProfiles/localhost.pubxml.user
