@@ -59,11 +59,12 @@
         console.log("currentTime:" + currentTime);
         var parts = currentTime.split(':');
         var seconds = parts[0] * 60 + parseInt(parts[1]);
-        var newMinutes = Math.round(seconds / 60, 0);
+        var newMinutes = Math.floor(seconds / 60, 0);
         console.log("newMinutes:" + newMinutes);
         var newSeconds = seconds % 60 + 1;
         if (newSeconds == 60) {
             newSeconds = "00";
+            newMinutes = newMinutes + 1;
         }
         console.log("newSeconds:" + newSeconds);
         var newSecondsLength = newSeconds.toString().length;
