@@ -4,7 +4,42 @@
 }
 
 <script type="text/javascript">
+    
+    $(document).ready(function() {
+        console.log("Loaded Toastmasters Timer!");
+        $("#speech").click();
+        onSpeech();
+    });
 
+    function onTableTopics() {
+        console.log("Clicked Table Topics...");
+        // Set Green, Yellow and Red limits
+        $("#greenTime").val("1:00");
+        $("#yellowTime").val("1:30");
+        $("#redTime").val("2:00");
+
+        $("#currentTime").val("1:00");
+    };
+
+    function onEvaluation() {
+        console.log("Clicked Evaluation...");
+        // Set Green, Yellow and Red limits
+        $("#greenTime").val("2:00");
+        $("#yellowTime").val("2:30");
+        $("#redTime").val("3:00");
+
+        $("#currentTime").val("2:00");
+    };
+
+    function onSpeech() {
+        console.log("Clicked Speech...");
+        // Set Green, Yellow and Red limits
+        $("#greenTime").val("5:00");
+        $("#yellowTime").val("6:00");
+        $("#redTime").val("7:00");
+
+        $("#currentTime").val("5:00");
+    };
 
 </script>
 
@@ -13,19 +48,27 @@
     <h1>Toastmasters Timer</h1>   
 
     <p>Please select Toastmasters Event:</p>
-    <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics">
+    <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics" onclick="onTableTopics()">
     <label for="tabletopics">Table Topics</label><br>
-    <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation">
+    <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation" onclick="onEvaluation()">
     <label for="evaluation">Evaluation</label><br>
-    <input type="radio" id="speech" name="toastmasters_event" value="Speech">
+    <input type="radio" id="speech" name="toastmasters_event" value="Speech" onclick="onSpeech()">
     <label for="speech">Speech</label>
 
     <br />
 
-    <input type="button" id="start" value="Start">
-    <input type="button" id="start" value="Stop">
-    <input type="button" id="start" value="Resume">
-    <input type="button" id="start" value="Reset">
+    <label>Green at:</label><input type="text" id="greenTime" readonly/>
+    <label>Yellow at:</label><input type="text" id="yellowTime" readonly/>
+    <label>Red at:</label><input type="text" id="redTime" readonly/>
+
+    <br />
+
+    <label>Current time:</label><input type="text" id="currentTime" readonly/>
+
+    <input type="button" id="start" value="Start" onclick="onStart()">
+    <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
+    <input type="button" id="resume" value="Resume" onclick="onResume()" disabled>
+    <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
 
 </div>
 
