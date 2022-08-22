@@ -11,49 +11,46 @@
                 
         <script type="text/javascript" src="timer.js"></script>
 
-        <div class="text-center border-primary">
-            <h1>Toastmasters Timer</h1>   
-            <label for="current_time">Current time </label>
-            <br/>
-            <input class="border-0 text-center" type="text" id="current_time" readonly />
+        <h1>Toastmasters Timer</h1>   
+        <input class="border-0 text-center h1" type="text" id="current_time" style="background-color: transparent;" readonly />
+
+        <div id="options" class="card">                
+            <div class="card-body">                    
+                <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics" onclick="onTableTopics()">
+                <label for="tabletopics">Table Topics</label><br/>
+                <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation" onclick="onEvaluation()">
+                <label for="evaluation">Evaluation</label><br/>
+                <input type="radio" id="speech" name="toastmasters_event" value="Speech" onclick="onSpeech()">
+                <label for="speech">Speech</label>                                    
+            </div>
         </div>
 
-        <div class="text-center">               
-            
-            <div id="options" class="card">                
-                <div class="card-body">
-                    <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics" onclick="onTableTopics()">
-                    <label for="tabletopics">Table Topics</label><br/>
-                    <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation" onclick="onEvaluation()">
-                    <label for="evaluation">Evaluation</label><br/>
-                    <input type="radio" id="speech" name="toastmasters_event" value="Speech" onclick="onSpeech()">
-                    <label for="speech">Speech</label>                
+        <div id="colours" class="card">                                
+            <div class="card-body">
+                <div style="background-color: green">
+                    <input class="border-0" type="text" id="green_time" readonly/>
+                    <label for="green_time">Green</label><br/>
                 </div>
-            </div>
-
-            <div id="colours" class="card">                                
-                <div class="card-body">
-                    <label for="green_time">Green</label>
-                    <input class="border-0 text-center" type="text" id="green_time" readonly/><br/>
-                    <label for="yellow_time">Yellow</label>
-                    <input class="border-0 text-center" type="text" id="yellow_time" readonly/><br/>
+                <div style="background-color: yellow">
+                    <input class="border-0" type="text" id="yellow_time" readonly/>
+                    <label for="yellow_time">Yellow</label><br/>
+                </div>
+                <div style="background-color: red">
+                    <input class="border-0" type="text" id="red_time" readonly/>                
                     <label for="red_time">Red</label>
-                    <input class="border-0 text-center" type="text" id="red_time" readonly/>                
                 </div>
             </div>
-            
-            <br/>
-
-            <button class="btn btn-primary" type="button" id="start" onclick="onStart()">Start</button>
-        
-            <button class="btn btn-primary" type="button" id="stop" onclick="onStop()" hidden>Stop</button>
-        
-            <button class="btn btn-primary" type="button" id="resume" onclick="onResume()" hidden>Resume</button>
-        
-            <button class="btn btn-primary" type="button" id="reset" onclick="onReset()" hidden>Reset</button>
-                   
-        
         </div>
+        
+        <br/>
+
+        <button class="btn btn-primary" type="button" id="start" onclick="onStart()">Start</button>
+    
+        <button class="btn btn-primary" type="button" id="stop" onclick="onStop()" hidden>Stop</button>
+    
+        <button class="btn btn-primary" type="button" id="resume" onclick="onResume()" hidden>Resume</button>
+    
+        <button class="btn btn-primary" type="button" id="reset" onclick="onReset()" hidden>Reset</button>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

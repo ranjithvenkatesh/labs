@@ -85,10 +85,10 @@ function updateBackgroundColor(newTime) {
         $(document.body).css("background-color", "green");
     }
     else if (newTime >= yellow_time && newTime < red_time) {
-        $(document.body).css("background-color", "yellow");
+        $(document.body).css("background-color", "yellow");        
     }
     else if (newTime >= red_time) {
-        $(document.body).css("background-color", "red");
+        $(document.body).css("background-color", "red");        
     }
 }
 
