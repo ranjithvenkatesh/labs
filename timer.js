@@ -39,7 +39,7 @@ var timer = null;
 function onStart() {
     console.log("onStart...");
     timer = setInterval(timerFunc, 1000);
-    $(document.body).css("background-color", "green");
+    $(document.body).css("background-color", "white");
     $("#start").prop("disabled", true);
     $("#stop").prop("disabled", false);
     $("#resume").prop("disabled", false);
