@@ -11,37 +11,38 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js" type="javascript"></script>
         <script type="text/javascript" src="timer.js"></script>
 
-        <div class="container-fluid">
+        <div class="container">
                 
             <h1>Toastmasters Timer</h1>   
 
             <p>Please select Toastmasters Event:</p>
+                            
             <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics" onclick="onTableTopics()">
-            <label for="tabletopics">Table Topics</label><br>
+            <label for="tabletopics">Table Topics</label><br>                
             <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation" onclick="onEvaluation()">
             <label for="evaluation">Evaluation</label><br>
             <input type="radio" id="speech" name="toastmasters_event" value="Speech" onclick="onSpeech()">
             <label for="speech">Speech</label>
-
+                        
             <br />
             <br />
 
             <div class="row">
-                <label for="green_time">Green at:</label>
+                <label for="green_time">Green at </label>
                 <br/>
-                <input type="text" id="green_time" readonly/>
+                <input class="border-0" type="text" id="green_time" readonly/>
             </div>   
             
             <div class="row">
-                <label for="yellow_time">Yellow at:</label>
+                <label for="yellow_time">Yellow at </label>
                 <br/>
-                <input type="text" id="yellow_time" readonly/>
+                <input class="border-0" type="text" id="yellow_time" readonly/>
             </div>
             
             <div class="row">
-                <label for="red_time">Red at:</label>
+                <label for="red_time">Red at </label>
                 <br/>
-                <input type="text" id="red_time" readonly/>
+                <input class="border-0" type="text" id="red_time" readonly/>
             </div>  
 
             <br/>
@@ -49,23 +50,23 @@
             <div class="row">
                 <label for="current_time">Current time:</label>
                 <br/>
-                <input type="text" id="current_time" readonly/>
+                <input class="border-0" type="text" id="current_time" readonly/>
             </div>
             <br/>
             <div class="row">
-                <input type="button" id="start" value="Start" onclick="onStart()">                
+                <button class="btn btn-primary" type="button" id="start" onclick="onStart()">Start</button>
             </div>
             <br/>
             <div class="row">
-                <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
+                <button class="btn btn-primary" type="button" id="stop" onclick="onStop()" disabled>Stop</button>
             </div>
             <br/>
             <div class="row">
-                <input type="button" id="resume" value="Resume" onclick="onResume()" disabled>
+                <button class="btn btn-primary" type="button" id="resume" onclick="onResume()" disabled>Resume</button>
             </div>
             <br/>
             <div class="row">
-                <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
+                <button class="btn btn-primary" type="button" id="reset" onclick="onReset()" disabled>Reset</button>
             </div>           
         
         </div>
