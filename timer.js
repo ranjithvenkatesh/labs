@@ -11,7 +11,7 @@ function onTableTopics() {
     $("#yellow_time").val("1:30");
     $("#red_time").val("2:00");
 
-    $("#current_time").val("1:00");
+    $("#current_time").val("0:00");
 };
 
 function onEvaluation() {
@@ -21,7 +21,7 @@ function onEvaluation() {
     $("#yellow_time").val("2:30");
     $("#red_time").val("3:00");
 
-    $("#current_time").val("2:00");
+    $("#current_time").val("0:00");
 };
 
 function onSpeech() {
@@ -31,7 +31,7 @@ function onSpeech() {
     $("#yellow_time").val("6:00");
     $("#red_time").val("7:00");
 
-    $("#current_time").val("5:00");
+    $("#current_time").val("0:00");
 };
 
 var timer = null;
