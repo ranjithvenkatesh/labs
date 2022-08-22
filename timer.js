@@ -45,10 +45,12 @@ function onStart() {
     console.log("onStart...");
     timer = setInterval(timerFunc, 1000);
     $(document.body).css("background-color", "lightgray");
-    $("#start").prop("disabled", true);
-    $("#stop").prop("disabled", false);
-    $("#resume").prop("disabled", false);
-    $("#reset").prop("disabled", false);
+    $("#start").prop("hidden", true);
+    $("#stop").prop("hidden", false);
+    $("#resume").prop("hidden", true);
+    $("#reset").prop("hidden", true);
+    $("#options").prop("hidden", true);
+    $("#colours").prop("hidden", true);
 };
 
 function timerFunc() {        
@@ -93,28 +95,34 @@ function updateBackgroundColor(newTime) {
 function onStop() {
     console.log("onStop...");
     clearInterval(timer);
-    $("#start").prop("disabled", true);
-    $("#stop").prop("disabled", true);
-    $("#resume").prop("disabled", false);
-    $("#reset").prop("disabled", false);
+    $("#start").prop("hidden", true);
+    $("#stop").prop("hidden", true);
+    $("#resume").prop("hidden", false);
+    $("#reset").prop("hidden", false);
+    $("#options").prop("hidden", true);
+    $("#colours").prop("hidden", true);
 }
 
 function onResume() {
     console.log("onResume...");
     timer = setInterval(timerFunc, 1000);
-    $("#start").prop("disabled", true);
-    $("#stop").prop("disabled", false);
-    $("#resume").prop("disabled", true);
-    $("#reset").prop("disabled", true);
+    $("#start").prop("hidden", true);
+    $("#stop").prop("hidden", false);
+    $("#resume").prop("hidden", true);
+    $("#reset").prop("hidden", true);
+    $("#options").prop("hidden", true);
+    $("#colours").prop("hidden", true);
 }
 
 function onReset() {
     console.log("onReset...");
     clearInterval(timer);
     $(document.body).css("background-color", "lightgray");
-    $("#current_time").val($("#green_time").val());
-    $("#start").prop("disabled", false);
-    $("#stop").prop("disabled", true);
-    $("#resume").prop("disabled", true);
-    $("#reset").prop("disabled", true);
+    $("#current_time").val("0:00");
+    $("#start").prop("hidden", false);
+    $("#stop").prop("hidden", true);
+    $("#resume").prop("hidden", true);
+    $("#reset").prop("hidden", true);
+    $("#options").prop("hidden", false);
+    $("#colours").prop("hidden", false);
 }
