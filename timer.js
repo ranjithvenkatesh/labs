@@ -44,7 +44,7 @@ var timer = null;
 function onStart() {
     console.log("onStart...");
     timer = setInterval(timerFunc, 1000);
-    $(document.body).css("background-color", "white");
+    $(document.body).css("background-color", "lightgray");
     $("#start").prop("disabled", true);
     $("#stop").prop("disabled", false);
     $("#resume").prop("disabled", false);
@@ -111,7 +111,7 @@ function onResume() {
 function onReset() {
     console.log("onReset...");
     clearInterval(timer);
-    $(document.body).css("background-color", "white");
+    $(document.body).css("background-color", "lightgray");
     $("#current_time").val($("#green_time").val());
     $("#start").prop("disabled", false);
     $("#stop").prop("disabled", true);
