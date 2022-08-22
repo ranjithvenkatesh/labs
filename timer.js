@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function () {
     // do things after the DOM loads fully
     console.log("Everything is loaded");
-    $("#speech").click();
-    onSpeech();
+    $("#speech").click();    
 });
 
 function onTableTopics() {
