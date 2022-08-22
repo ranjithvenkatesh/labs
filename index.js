@@ -7,31 +7,31 @@ $(document).ready(function() {
 function onTableTopics() {
     console.log("Clicked Table Topics...");
     // Set Green, Yellow and Red limits
-    $("#greenTime").val("1:00");
-    $("#yellowTime").val("1:30");
-    $("#redTime").val("2:00");
+    $("#green_time").val("1:00");
+    $("#yellow_time").val("1:30");
+    $("#red_time").val("2:00");
 
-    $("#currentTime").val("1:00");
+    $("#current_time").val("1:00");
 };
 
 function onEvaluation() {
     console.log("Clicked Evaluation...");
     // Set Green, Yellow and Red limits
-    $("#greenTime").val("2:00");
-    $("#yellowTime").val("2:30");
-    $("#redTime").val("3:00");
+    $("#green_time").val("2:00");
+    $("#yellow_time").val("2:30");
+    $("#red_time").val("3:00");
 
-    $("#currentTime").val("2:00");
+    $("#current_time").val("2:00");
 };
 
 function onSpeech() {
     console.log("Clicked Speech...");
     // Set Green, Yellow and Red limits
-    $("#greenTime").val("5:00");
-    $("#yellowTime").val("6:00");
-    $("#redTime").val("7:00");
+    $("#green_time").val("5:00");
+    $("#yellow_time").val("6:00");
+    $("#red_time").val("7:00");
 
-    $("#currentTime").val("5:00");
+    $("#current_time").val("5:00");
 };
 
 var timer = null;
@@ -48,9 +48,9 @@ function onStart() {
 
 function timerFunc() {        
     console.log("timerFunc:" + Date.now);
-    var currentTime = $("#currentTime").val();
-    console.log("currentTime:" + currentTime);
-    var parts = currentTime.split(':');
+    var current_time = $("#current_time").val();
+    console.log("current_time:" + current_time);
+    var parts = current_time.split(':');
     var seconds = parts[0] * 60 + parseInt(parts[1]);
     var newMinutes = Math.floor(seconds / 60, 0);
     console.log("newMinutes:" + newMinutes);
@@ -66,21 +66,21 @@ function timerFunc() {
         newSeconds = "0" + newSeconds;
     }
     updateBackgroundColor(newMinutes + ":" + newSeconds);
-    $("#currentTime").val(newMinutes + ":" + newSeconds);
+    $("#current_time").val(newMinutes + ":" + newSeconds);
     console.log("newTime:" + newMinutes + ":" + newSeconds);        
 }
 
 function updateBackgroundColor(newTime) {
-    var greenTime = $("#greenTime").val();
-    var yellowTime = $("#yellowTime").val();
-    var redTime = $("#redTime").val();
-    if (newTime >= greenTime && newTime < yellowTime) {
+    var green_time = $("#green_time").val();
+    var yellow_time = $("#yellow_time").val();
+    var red_time = $("#red_time").val();
+    if (newTime >= green_time && newTime < yellow_time) {
         $(document.body).css("background-color", "green");
     }
-    else if (newTime >= yellowTime && newTime < redTime) {
+    else if (newTime >= yellow_time && newTime < red_time) {
         $(document.body).css("background-color", "yellow");
     }
-    else if (newTime >= redTime) {
+    else if (newTime >= red_time) {
         $(document.body).css("background-color", "red");
     }
 }
@@ -107,7 +107,7 @@ function onReset() {
     console.log("onReset...");
     clearInterval(timer);
     $(document.body).css("background-color", "white");
-    $("#currentTime").val($("#greenTime").val());
+    $("#current_time").val($("#green_time").val());
     $("#start").prop("disabled", false);
     $("#stop").prop("disabled", true);
     $("#resume").prop("disabled", true);

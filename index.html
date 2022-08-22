@@ -1,9 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toastmasters Timer</title>
+    </head>
     <body>
+        
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        
         <script type="text/javascript" src="index.js"></script>
 
-        <div id="backgroundToastmastersTimer">
+        <div id="background_toastmasters_timer">
             
             <h1>Toastmasters Timer</h1>   
 
@@ -17,13 +23,13 @@
 
             <br />
 
-            <label>Green at:</label><input type="text" id="greenTime" readonly/>
-            <label>Yellow at:</label><input type="text" id="yellowTime" readonly/>
-            <label>Red at:</label><input type="text" id="redTime" readonly/>
+            <label for="green_time">Green at:</label><input type="text" id="green_time" readonly/>
+            <label for="yellow_time">Yellow at:</label><input type="text" id="yellow_time" readonly/>
+            <label for="red_time">Red at:</label><input type="text" id="red_time" readonly/>
 
             <br />
 
-            <label>Current time:</label><input type="text" id="currentTime" readonly/>
+            <label for="current_time">Current time:</label><input type="text" id="current_time" readonly/>
 
             <input type="button" id="start" value="Start" onclick="onStart()">
             <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
@@ -31,5 +37,6 @@
             <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
 
         </div>
+
     </body>
 </html>
