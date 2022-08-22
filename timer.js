@@ -1,15 +1,11 @@
-window.addEventListener("load", function () {
-    // do things after the DOM loads fully
-    console.log("Everything is loaded");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     // do things after the DOM loads partially
     console.log("DOM is loaded");
 });
 
-$(document).ready(function() {
-    console.log("Loaded Toastmasters Timer!");
+window.addEventListener("load", function () {
+    // do things after the DOM loads fully
+    console.log("Everything is loaded");
     $("#speech").click();
     onSpeech();
 });
