@@ -13,8 +13,8 @@
 
         <script type="text/javascript" src="timer.js"></script>
 
-        <div id="background_toastmasters_timer">
-            
+        <div class="container-fluid">
+                
             <h1>Toastmasters Timer</h1>   
 
             <p>Please select Toastmasters Event:</p>
@@ -26,21 +26,50 @@
             <label for="speech">Speech</label>
 
             <br />
-
-            <label for="green_time">Green at:</label><input type="text" id="green_time" readonly/>
-            <label for="yellow_time">Yellow at:</label><input type="text" id="yellow_time" readonly/>
-            <label for="red_time">Red at:</label><input type="text" id="red_time" readonly/>
-
             <br />
 
-            <label for="current_time">Current time:</label><input type="text" id="current_time" readonly/>
+            <div class="row">
+                <label for="green_time">Green at:</label>
+                <br/>
+                <input type="text" id="green_time" readonly/>
+            </div>   
+            
+            <div class="row">
+                <label for="yellow_time">Yellow at:</label>
+                <br/>
+                <input type="text" id="yellow_time" readonly/>
+            </div>
+            
+            <div class="row">
+                <label for="red_time">Red at:</label>
+                <br/>
+                <input type="text" id="red_time" readonly/>
+            </div>  
 
-            <input type="button" id="start" value="Start" onclick="onStart()">
-            <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
-            <input type="button" id="resume" value="Resume" onclick="onResume()" disabled>
-            <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
+            <br/>
 
+            <div class="row">
+                <label for="current_time">Current time:</label>
+                <br/>
+                <input type="text" id="current_time" readonly/>
+            </div>
+            <br/>
+            <div class="row">
+                <input type="button" id="start" value="Start" onclick="onStart()">                
+            </div>
+            <br/>
+            <div class="row">
+                <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
+            </div>
+            <br/>
+            <div class="row">
+                <input type="button" id="resume" value="Resume" onclick="onResume()" disabled>
+            </div>
+            <br/>
+            <div class="row">
+                <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
+            </div>           
+        
         </div>
-
     </body>
 </html>
