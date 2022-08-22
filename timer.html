@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toastmasters Timer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        
+        <script type="text/javascript" src="timer.js"></script>
+
+        <div id="background_toastmasters_timer">
+            
+            <h1>Toastmasters Timer</h1>   
+
+            <p>Please select Toastmasters Event:</p>
+            <input type="radio" id="tabletopics" name="toastmasters_event" value="Table Topics" onclick="onTableTopics()">
+            <label for="tabletopics">Table Topics</label><br>
+            <input type="radio" id="evaluation" name="toastmasters_event" value="Evaluation" onclick="onEvaluation()">
+            <label for="evaluation">Evaluation</label><br>
+            <input type="radio" id="speech" name="toastmasters_event" value="Speech" onclick="onSpeech()">
+            <label for="speech">Speech</label>
+
+            <br />
+
+            <label for="green_time">Green at:</label><input type="text" id="green_time" readonly/>
+            <label for="yellow_time">Yellow at:</label><input type="text" id="yellow_time" readonly/>
+            <label for="red_time">Red at:</label><input type="text" id="red_time" readonly/>
+
+            <br />
+
+            <label for="current_time">Current time:</label><input type="text" id="current_time" readonly/>
+
+            <input type="button" id="start" value="Start" onclick="onStart()">
+            <input type="button" id="stop" value="Stop" onclick="onStop()" disabled>
+            <input type="button" id="resume" value="Resume" onclick="onResume()" disabled>
+            <input type="button" id="reset" value="Reset" onclick="onReset()" disabled>
+
+        </div>
+
+    </body>
+</html>
