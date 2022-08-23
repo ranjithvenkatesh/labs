@@ -15,14 +15,7 @@ div.bg-red {
 }
 
 .center {
-    width:400px;
-    height:400px;
-    position: fixed;
-    background-color: blue;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
+    margin:0px auto
 }
 
 .twohundred {
