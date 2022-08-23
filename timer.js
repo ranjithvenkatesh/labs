@@ -17,6 +17,7 @@ function onTableTopics() {
     $("#red_time").val("2:00");
 
     $("#current_time").val("0:00");
+    $("#current_event").text("Table Topics");    
 };
 
 function onEvaluation() {
@@ -27,6 +28,7 @@ function onEvaluation() {
     $("#red_time").val("3:00");
 
     $("#current_time").val("0:00");
+    $("#current_event").text("Evaluation");
 };
 
 function onSpeech() {
@@ -37,6 +39,7 @@ function onSpeech() {
     $("#red_time").val("7:00");
 
     $("#current_time").val("0:00");
+    $("#current_event").text("Speech");
 };
 
 var timer = null;
