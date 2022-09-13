@@ -84,15 +84,16 @@
         <br/>
         <div class="row">
             <div class="column">
-                <textarea id="text_readability" class="center">
-
-                </textarea>
+                <textarea id="text_readability" class="center"></textarea>
             </div>                
             
             <div class="column">
                 <label for="kincaid">
                     Flesch–Kincaid grade level
                 </label>
+                <input id="kincaid" type="text"/>
+                <button class="btn" data-toggle="collapse" data-target="#collapseKincaid">i</button>
+                <div id="collapseKincaid" class="collapse">                                
                 <table>
 
                     <tbody><tr>
@@ -157,8 +158,9 @@
                     <td>Professional
                     </td>
                     <td>Extremely difficult to read. Best understood by university graduates.
-                    </td></tr></tbody></table>
-                <input id="kincaid" type="text"/>
+                    </td></tr></tbody>
+                </table>                
+              </div>
             </div>
         </div>
         <br/>
