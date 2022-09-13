@@ -15,9 +15,7 @@ div.bg-red {
 }
 
 .center {
-    margin:0px auto
-}
-
-.twohundred {
-    font-size: 200px;
+    margin:0px auto;
+    width: 100%;
+    font-size: xx-large;
 }
