@@ -1,5 +1,5 @@
 function onReadability(){
-    var fleschKincaidGradeLevel = getFleschKincaidGradeLevel($("#kincaid").val(text_readability));
+    var fleschKincaidGradeLevel = getFleschKincaidGradeLevel($("#text_readability").val());
     $("#kincaid").val(fleschKincaidGradeLevel);
 }
 
