@@ -4,7 +4,5 @@ function onReadability(){
 }
 
 function getFleschKincaidGradeLevel(inputText){
-    var TS = require('TextStatistics.js');
-    var ts = TS();
-    return ts.fleschKincaidGradeLevel(inputText);
+    return TextStatistics.fleschKincaidGradeLevel(inputText);
 }
